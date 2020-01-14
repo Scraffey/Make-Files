@@ -1,6 +1,6 @@
 JAVA = java
 JAVAC = javac
-CPP_FlAGS = -Wall -g 
+JAVA_FlAGS = -Wall -g 
 L_FLAGS = -lm
 TARGET = PA2
 
@@ -42,7 +42,7 @@ gdb:
 	gdb ./$(TARGET)
 
 valgrind:
-	valgrind --leak-check=full -v --show-leak-kinds-all $(JAVA) $(TARGET) $(CPP_SRCS)
+	valgrind --leak-check=full -v --show-leak-kinds-all $(JAVA) $(TARGET) $(JAVA_SRCS)
 
 clean:
 	rm -f $(TARGET)
