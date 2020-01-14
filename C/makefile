@@ -1,5 +1,5 @@
 CC = gcc
-CC_FlAGS = -Wall -g -std=c++11
+CC_FlAGS = -Wall -g
 L_FLAGS = -lm
 TARGET = PA2
 
