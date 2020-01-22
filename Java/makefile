@@ -1,15 +1,17 @@
 JAVA = java
 JAVAC = javac
-JAVA_FlAGS = -Wall -g 
-L_FLAGS = -lm
-TARGET = PA2
+CPP_FlAGS = -Wall -g 
+L_FLAGS = 
+TARGET = 
 
-OUT_FILE = out.txt
-IN_FILE = books.txt
+OUT_FILE = 
+IN_FILE = 
 
 TAR_FILE = scraffe_PA2.tar.gz
 ZIP_FILE = scraffe_PA2.zip
 
+FILEPATH = 
+RUNPATH = 
 
 JAVA_SRCS := \
 	$(wildcard *.java)
@@ -17,32 +19,29 @@ JAVA_SRCS := \
 ARGS = \
 	$(IN_FILE) $(OUT_FILE)
 
-HDRS := \
-	$(wildcard *.h)
+#HDRS := \
+#	$(wildcard *.h)
 
 all: build
 	@echo "All Done!"
 
-build: 
-	$(JAVAC) $(JAVA_SRCS) $(JAVA_FLAGS) -o $(TARGET)
+default: $(FILEPATH)$(JAVA_SRCS)
+	$(JAVAC) $(FILEPATH)$(JAVA_SRCS) 
 
-run:
-	$(JAVA) $(TARGET) $(ARGS)
+run: $(RUNPATH)$(JAVA_SRCS)
+	$(JAVA) $(TARGET) 
 
 tar: 
 	tar -czvf $(TAR_FILE) $(JAVA_SRCS) $(HDRS) makefile
 
 zip:
-	zip $(ZIP_FILE) $(JAVA_SRCS) $(HDRS) makefile
+	zip $(ZIP_FILE) -r $(JAVA_SRCS) #$(HDRS) makefile
 
 handin:
 	handin $(TAR_FILE)
 
-gdb:
-	gdb ./$(TARGET)
-
 valgrind:
-	valgrind --leak-check=full -v --show-leak-kinds-all $(JAVA) $(TARGET) $(JAVA_SRCS)
+	valgrind --leak-check=full -v --show-leak-kinds-all $(JAVA) $(TARGET) $(CPP_SRCS)
 
 clean:
 	rm -f $(TARGET)
