@@ -31,6 +31,9 @@ run:
 tar: 
 	tar -czvf $(TAR_FILE) $(CPP_SRCS) $(HDRS) makefile
 
+untar: 
+	tar -zxvf $(TAR_FILE) $(CPP_SRCS) $(HDRS) makefile
+
 zip:
 	zip $(ZIP_FILE) $(CPP_SRCS) $(HDRS) makefile
 
