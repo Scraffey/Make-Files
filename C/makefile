@@ -4,9 +4,10 @@ CFLAGS = -Wall -g -save-temps
 TARGET = PA1
 
 OUT_FILE = 
-IN_FILE =
+IN_FILE = 20 25
 
 TAR_FILE = scraffe_PA1.tar.gz
+TAR_EXTRAS = PA1.docx
 ZIP_FILE = scraffe_PA1.zip
 
 
@@ -32,10 +33,10 @@ run:
 	./$(TARGET) $(ARGS)
 
 tar: 
-	tar -czvf $(TAR_FILE) $(C_SRCS) $(HDRS) makefile
+	tar -czvf $(TAR_FILE) $(C_SRCS) $(HDRS) $(TAR_EXTRAS) makefile
 
 untar: 
-	tar -zxvf $(TAR_FILE) $(C_SRCS) $(HDRS) makefile
+	tar -zxvf $(TAR_FILE)
 
 zip:
 	zip $(ZIP_FILE) $(C_SRCS) $(HDRS) makefile
