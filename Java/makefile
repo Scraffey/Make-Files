@@ -4,11 +4,17 @@ CPP_FlAGS = -Wall -g
 L_FLAGS = -l
 TARGET = 
 
-FILEPATH = 
+FILEPATH := \
+	$(wildcard *.java) \
+	$(wildcard */*.java) \
+	$(wildcard */**/*.java)
 
-RUNPATH = 
+RUNPATH := \
+	$(wildcard *.java) \
+	$(wildcard */*.java) \
+	$(wildcard */**/*.java)
 
-CLEANPATH = 
+CLEANPATH = $(RUNPATH)
 
 TAR_FILE = scraffe_.tar.gz
 ZIP_FILE = scraffe_.zip
