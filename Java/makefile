@@ -10,9 +10,9 @@ FILEPATH := \
 	$(wildcard */**/*.java)
 
 RUNPATH := \
-	$(wildcard *.java) \
-	$(wildcard */*.java) \
-	$(wildcard */**/*.java)
+	$(wildcard *.class) \
+	$(wildcard */*.class) \
+	$(wildcard */**/*.class)
 
 CLEANPATH = $(RUNPATH)
 
