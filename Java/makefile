@@ -16,8 +16,8 @@ RUNPATH := \
 
 CLEANPATH = $(RUNPATH)
 
-TAR_FILE = scraffe_.tar.gz
-ZIP_FILE = scraffe_.zip
+TAR_FILE = scraffe.tar.gz
+ZIP_FILE = scraffe.zip
 OUT_FILE = 
 IN_FILE = 
 
@@ -38,6 +38,9 @@ untar:
 
 zip:
 	zip $(ZIP_FILE) -r $(JAVA_SRCS) makefile
+
+unzip:
+	unzip $(ZIP_FILE)
 
 handin:
 	handin $(TAR_FILE)

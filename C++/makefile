@@ -1,13 +1,13 @@
 CPP = g++
 CPP_FlAGS = -Wall -g -std=c++11
 L_FLAGS = -lm
-TARGET = PA2
+TARGET = 
 
-OUT_FILE = out.txt
-IN_FILE = books.txt
+OUT_FILE = 
+IN_FILE = 
 
-TAR_FILE = scraffe_PA2.tar.gz
-ZIP_FILE = scraffe_PA2.zip
+TAR_FILE = scraffe.tar.gz
+ZIP_FILE = scraffe.zip
 
 
 CPP_SRCS := \
@@ -36,6 +36,9 @@ untar:
 
 zip:
 	zip $(ZIP_FILE) $(CPP_SRCS) $(HDRS) makefile
+
+unzip:
+	unzip $(ZIP_FILE)
 
 handin:
 	handin $(TAR_FILE)

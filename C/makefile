@@ -1,14 +1,14 @@
 CC = gcc
 L_FLAGS = -lm
 CFLAGS = -Wall -g -save-temps
-TARGET = PA1
+TARGET = 
 
 OUT_FILE = 
-IN_FILE = 20 25
+IN_FILE =
 
-TAR_FILE = scraffe_PA1.tar.gz
-TAR_EXTRAS = PA1.docx
-ZIP_FILE = scraffe_PA1.zip
+TAR_FILE = scraffe.tar.gz
+TAR_EXTRAS = 
+ZIP_FILE = scraffe.zip
 
 
 C_SRCS := \
@@ -40,6 +40,9 @@ untar:
 
 zip:
 	zip $(ZIP_FILE) $(C_SRCS) $(HDRS) makefile
+
+unzip:
+	unzip $(ZIP_FILE)
 
 handin:
 	handin $(TAR_FILE)
