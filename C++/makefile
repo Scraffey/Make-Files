@@ -6,8 +6,8 @@ TARGET =
 OUT_FILE = 
 IN_FILE = 
 
-TAR_FILE = scraffe.tar.gz
-ZIP_FILE = scraffe.zip
+TAR_FILE = .tar.gz
+ZIP_FILE = .zip
 
 
 CPP_SRCS := \
@@ -56,7 +56,7 @@ cat:
 	cat $(OUT_FILE)
 
 git:
-	git push -u origin master
+	git push -u origin main
 
 
 
